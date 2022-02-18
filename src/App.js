@@ -2,6 +2,14 @@ import React from "react"
 import Die from "./Die"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
+import DiceFace from "./components/diceFace/DiceFace";
+import FirstFace from "./components/diceFace/FirstFace";
+import SecondFace from "./components/diceFace/SecondFace";
+import ThirdFace from "./components/diceFace/ThirdFace";
+import ForthFace from "./components/diceFace/ForthFace";
+import FifthFace from "./components/diceFace/FifthFace";
+import SixthFace from "./components/diceFace/SixthFace";
+
 
 export default function App() {
 
@@ -55,12 +63,48 @@ export default function App() {
     }
 
     const diceElements = dice.map(die => (
-        <Die
+        die.value === 1 ?
+        <FirstFace
             key={die.id}
             value={die.value}
             isHeld={die.isHeld}
             holdDice={() => holdDice(die.id)}
-        />
+        />  :
+            die.value === 2 ?
+            <SecondFace
+                key={die.id}
+                value={die.value}
+                isHeld={die.isHeld}
+                holdDice={() => holdDice(die.id)}
+            /> :
+                die.value === 3 ?
+                    <ThirdFace
+                        key={die.id}
+                        value={die.value}
+                        isHeld={die.isHeld}
+                        holdDice={() => holdDice(die.id)}
+        /> :
+                    die.value === 4 ?
+                        <ForthFace
+                            key={die.id}
+                            value={die.value}
+                            isHeld={die.isHeld}
+                            holdDice={() => holdDice(die.id)}
+                        /> :
+                        die.value === 5 ?
+                            <FifthFace
+                                key={die.id}
+                                value={die.value}
+                                isHeld={die.isHeld}
+                                holdDice={() => holdDice(die.id)}
+                            /> :
+                            <SixthFace
+                                key={die.id}
+                                value={die.value}
+                                isHeld={die.isHeld}
+                                holdDice={() => holdDice(die.id)}
+                            />
+
     ))
 
     return (
@@ -71,7 +115,9 @@ export default function App() {
                 Click each die to freeze it at its current value between rolls.</p>
             <div className="dice-container">
                 {diceElements}
+
             </div>
+
             <button
                 className="roll-dice"
                 onClick={rollDice}
