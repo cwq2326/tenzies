@@ -1,4 +1,5 @@
 import React from "react"
+import "./DieFace.css"
 
 export default function FifthFace(props) {
     const styles = {

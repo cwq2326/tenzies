@@ -1,4 +1,5 @@
 import React from "react"
+import "./DieFace.css"
 
 export default function SixthFace(props) {const styles = {
     backgroundColor: props.isHeld ? "#59E391" : "tomato"

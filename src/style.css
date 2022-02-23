@@ -1,25 +1,4 @@
-* {
-    box-sizing: border-box;
-}
 
-body {
-    margin: 0;
-    background-color: #0B2434;
-    padding: 20px;
-    font-family: 'Karla', sans-serif;
-}
-
-main {
-    background-color: #F5F5F5;
-    height: 400px;
-    max-width: 800px;
-    border-radius: 5px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .title {
     font-size: 40px;
@@ -52,10 +31,6 @@ main {
 
 }
 
-.die-num {
-    font-size: 2rem;
-}
-
 .roll-dice {
     height: 50px;
     width: 150px;
@@ -83,70 +58,4 @@ main {
     height: 80px;
     border-radius: 10%;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.dot {
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color:white;
-}
-
-.first-face{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.second-face{
-    display: flex;
-
-    justify-content : space-between;
-}
-
-.second-face .dot:nth-of-type(2) {
-    align-self: flex-end;
-}
-
-.third-face {
-    display: flex;
-
-    justify-content : space-between;
-}
-
-.third-face .dot:nth-of-type(3) {
-    align-self: flex-end;
-}
-
-.third-face .dot:nth-of-type(2) {
-    align-self: center;
-}
-
-.fourth-face {
-    display: flex;
-    justify-content: space-between;
-}
-
-.fourth-face .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.fifth-face {
-    display: flex;
-    justify-content: space-between;
-}
-
-.fifth-face .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.fifth-face .column:nth-of-type(2) {
-    justify-content: center;
 }
